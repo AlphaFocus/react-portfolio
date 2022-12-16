@@ -81,7 +81,7 @@ function App() {
       <LineGradient />
       <div className="w-5/6 mx-auto md:h-full">
         <motion.div
-            onViewportEnter={() => setSelectedPage("testimonials")}
+            onViewportEnter={() => setSelectedPage("contact")}
           >
           <Contact />
         </motion.div>
