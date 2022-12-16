@@ -23,7 +23,10 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY === 0) setIsTopOfPage(true);
+      if (window.scrollY === 0) {
+        setIsTopOfPage(true);
+        setSelectedPage("home");
+      }
       if (window.scrollY !== 0) setIsTopOfPage(false);
     }
 
@@ -47,6 +50,8 @@ function App() {
           />
         )}
         <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
           onViewportEnter={() => setSelectedPage("home")}
         >
           <Landing setSelectedPage={setSelectedPage}/>
@@ -65,6 +70,8 @@ function App() {
       <LineGradient />
       <div className="w-5/6 mx-auto">
         <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
           onViewportEnter={() => setSelectedPage("projects")}
         >
           <Projects />
@@ -73,7 +80,9 @@ function App() {
       <LineGradient />
       <div className="w-5/6 mx-auto md:h-full">
         <motion.div
-            onViewportEnter={() => setSelectedPage("testimonials")}
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage("testimonials")}
           >
           <Testimonials />
         </motion.div>
@@ -81,6 +90,8 @@ function App() {
       <LineGradient />
       <div className="w-5/6 mx-auto md:h-full">
         <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
             onViewportEnter={() => setSelectedPage("contact")}
           >
           <Contact />
